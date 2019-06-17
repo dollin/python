@@ -15,7 +15,7 @@ def sort_rgb(array):
         g += 1 if x == 'G' else 0
         b += 1 if x == 'B' else 0
 
-    print('{}, {}, {}'.format(r, g, b))
+    print(f'{r}, {g}, {b}')
     array[:r] = ['R'] * r
     array[r: r + g] = ['G'] * g
     array[r + g: r + g + b] = ['B'] * b
