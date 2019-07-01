@@ -1,4 +1,9 @@
+import logging
 
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s [%(levelname)s] [%(threadName)s] %(funcName)s:%(lineno)d %(message)s',
+)
 
 def encode(input_str):
     encoded = ''
@@ -29,5 +34,5 @@ def decode(input_str):
     return decoded
 
 s = 'aaaaaaaaaabbbccdaa'
-print(encode(s))
-print(decode(encode(s)))
+logging.info(encode(s))
+logging.info(decode(encode(s)))

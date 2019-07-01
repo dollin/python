@@ -1,3 +1,9 @@
+import logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s [%(levelname)s] [%(threadName)s] %(funcName)s:%(lineno)d %(message)s',
+)
 
 class Stack:
     stack_items = []
@@ -22,9 +28,9 @@ if __name__ == "__main__":
     stack.push(2)
     stack.push(3)
     stack.push(1)
-    print(f"min=1 : {stack.min()}")
-    print(f"popped=1 : {stack.pop()}")
-    print(f"min=2 : {stack.min()}")
-    print(f"popped=3 : {stack.pop()}")
-    print(f"min=2 : {stack.min()}")
-    print(f"popped=2 : {stack.pop()}")
+    logging.info(f"min=1 : {stack.min()}")
+    logging.info(f"popped=1 : {stack.pop()}")
+    logging.info(f"min=2 : {stack.min()}")
+    logging.info(f"popped=3 : {stack.pop()}")
+    logging.info(f"min=2 : {stack.min()}")
+    logging.info(f"popped=2 : {stack.pop()}")

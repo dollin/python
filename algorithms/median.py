@@ -1,4 +1,11 @@
 
+import logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s [%(levelname)s] [%(threadName)s] %(funcName)s:%(lineno)d %(message)s',
+)
+
 """
 Compute the running median of a sequence of numbers. That is, given a stream of numbers,
 print out the median of the list so far on each new element.
@@ -27,8 +34,8 @@ def median(lst):
         if not added:
             sorted_list.append(val)
         if len(sorted_list) % 2 != 0:
-            print(sorted_list[int((len(sorted_list) - 1) / 2)])
+            logging.info(sorted_list[int((len(sorted_list) - 1) / 2)])
         else:
-            print((sorted_list[int((len(sorted_list) - 1) / 2)] + sorted_list[int((len(sorted_list) + 1) / 2)]) / 2)
+            logging.info((sorted_list[int((len(sorted_list) - 1) / 2)] + sorted_list[int((len(sorted_list) + 1) / 2)]) / 2)
 
 median([2, 1, 5, 7, 2, 0, 5])

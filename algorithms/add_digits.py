@@ -1,3 +1,10 @@
+import logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s [%(levelname)s] [%(threadName)s] %(funcName)s:%(lineno)d %(message)s',
+)
+
 class AddDigits:
 
     """
@@ -17,7 +24,7 @@ class AddDigits:
 
 def main():
     ad = AddDigits()
-    print(ad.add_digits(12384))
+    logging.info(ad.add_digits(12384))
 
 
 if __name__ == '__main__':

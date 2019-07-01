@@ -1,4 +1,11 @@
 
+import logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s [%(levelname)s] [%(threadName)s] %(funcName)s:%(lineno)d %(message)s',
+)
+
 """
 Given an array of strictly the characters 'R', 'G', and 'B', segregate the values of the array so that
 all the Rs come first, the Gs come second, and the Bs come last. You can only swap elements of the array.
@@ -15,13 +22,13 @@ def sort_rgb(array):
         g += 1 if x == 'G' else 0
         b += 1 if x == 'B' else 0
 
-    print(f'{r}, {g}, {b}')
+    logging.info(f'{r}, {g}, {b}')
     array[:r] = ['R'] * r
     array[r: r + g] = ['G'] * g
     array[r + g: r + g + b] = ['B'] * b
 
 
 arr = ['R', 'B', 'G', 'R', 'G', 'B', 'G', 'B']
-print(','.join(arr))
+logging.info(','.join(arr))
 sort_rgb(arr)
-print(','.join(arr))
+logging.info(','.join(arr))
