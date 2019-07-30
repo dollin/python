@@ -39,7 +39,7 @@ def sort_cache():
     return by_relevance
 
 
-def print_summary(company):
+def print_summary(company=None):
     print('{:8.8}, {:10.10}, {:45.45}, {:48.48}, {:24.24}, {:100.100}, {}'
           .format('rank', 'posted', 'role', 'company', 'rate', 'description', 'link'))
 
@@ -60,5 +60,4 @@ def print_summary(company):
 
 if __name__ == "__main__":
     populate_cache()
-    # print_summary(None)
-    print_summary(None)
+    print_summary()

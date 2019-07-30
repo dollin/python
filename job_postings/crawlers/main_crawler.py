@@ -24,7 +24,7 @@ logging.basicConfig(
 
 def process_root(root):
     logging.info('reading urls from ' + root)
-    config = configparser.ConfigParser()
+    config = configparser.RawConfigParser()
     config.read(root)
 
     for section in config.sections():

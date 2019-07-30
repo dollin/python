@@ -2,7 +2,6 @@
 import json
 import logging
 import urllib.parse as urlparse
-# from job_postings.postings.job_posting import JobPosting
 import job_postings.postings.job_posting as job_posting
 from datetime import datetime
 
